@@ -1,0 +1,58 @@
+<style scoped>
+:scope .ar-math-figure {
+  margin-top: 1em;
+  margin-bottom: 24px;
+  color: black;
+}
+
+:scope .ar-math-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-auto-flow: column;
+    grid-column-gap: 0.2em;
+    grid-row-gap: 0.5em;
+
+    justify-items: start;
+    align-items: center;
+    justify-content: center;
+}
+:scope .ar-math-grid > math-latex {
+  grid-row: 1;
+}
+:scope .ar-math-grid > math-latex > .katex-display {
+  margin: 0;
+}
+:scope .ar-math-grid > span.ar-math-annotation {
+  font-size: 40%;
+  line-height: 1.2em;
+  color: rgba(0, 0, 0, 0.6);
+  align-self: start;
+}
+</style>
+<p>
+    What input was important for making a prediction?
+</p>
+<figure class="ar-math-figure fragment">
+    <div class="ar-math-grid">
+      <math-latex display-mode latex="\textrm{connectivity}("></math-latex>
+      <math-latex style="justify-self: center;" display-mode latex="t"></math-latex>
+      <span class="ar-math-annotation">
+         Input time index.
+      </span>
+
+      <math-latex display-mode latex=","></math-latex>
+      <math-latex style="justify-self: center;" display-mode latex="\tilde{t}"></math-latex>
+      <span class="ar-math-annotation">
+         Output time index.
+      </span>
+
+      <math-latex display-mode latex=") ="></math-latex>
+      <math-latex display-mode latex="\left|\left|\frac{\partial (h_L^{\tilde{t}})_k}{\partial x^t}\right|\right|_2"></math-latex>
+      <span class="ar-math-annotation" style="max-width: 192px">
+         Magnitude of the gradient, between the logits for the desired output <math-latex latex="(h_L^{\tilde{t}})_k"></math-latex> and the input
+        <math-latex latex="x^t"></math-latex>.
+      </span>
+    </div>
+</figure>

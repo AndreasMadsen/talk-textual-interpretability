@@ -1,0 +1,12 @@
+<pre><code data-trim data-noescape data-line-numbers="1,3,7">
+from textualheatmap import TextualHeatmap
+
+heatmap = TextualHeatmap(
+    facet_titles = ['BERT', 'Distil BERT']
+    show_meta=True
+)
+heatmap.set_data([
+    compute_textual_saliency(bert, text),
+    compute_textual_saliency(distil_bert, text)
+])
+</code></pre>

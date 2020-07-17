@@ -1,0 +1,359 @@
+
+<style>
+#ar-accuracy-graph svg text {
+    fill: #93a1a1;
+}
+
+#ar-accuracy-graph .legend {
+  display: grid;
+  margin-bottom: 10px;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 145px);
+  justify-content: center;
+}
+
+#ar-accuracy-graph .legend svg.legend-item {
+  display: block;
+  width: 145px;
+}
+
+#ar-accuracy-graph .legend svg.legend-item .legend-background {
+  fill: rgba(235, 235, 235, 0.12);
+}
+
+#ar-accuracy-graph .legend svg.legend-item .legend-color {
+  text-anchor: middle;
+  alignment-baseline: middle;
+  dominant-baseline: middle;
+  font: 12px sans-serif;
+}
+
+#ar-accuracy-graph .legend svg.legend-item .legend-text {
+  text-anchor: start;
+  alignment-baseline: middle;
+  dominant-baseline: middle;
+  font: 12px sans-serif;
+}
+
+svg.ar-line-graph {
+  shape-rendering: crispEdges;
+  font-size: 16px;
+}
+
+svg.ar-line-graph .tick text {
+  font-size: 14px;
+  fill: #505050;
+}
+
+svg.ar-line-graph .tick line {
+  stroke-width: 2;
+  stroke: black;
+}
+
+svg.ar-line-graph .background {
+  fill: rgba(235, 235, 235, 0.12);
+}
+
+svg.ar-line-graph .facet {
+  font-size: 14px;
+}
+
+svg.ar-line-graph .facet-background {
+  fill: #D9D9D9;
+}
+
+svg.ar-line-graph path.line {
+  fill: none;
+  shape-rendering: geometricPrecision;
+  stroke-width: 2;
+  stroke-opacity: .7;
+}
+
+svg.ar-line-graph .grid line {
+  stroke: black;
+  stroke-width: 2;
+}
+
+svg.ar-line-graph .grid .minor line {
+  stroke-opacity: .5;
+}
+
+svg.ar-line-graph .grid text {
+  display: none;
+}
+
+svg.ar-line-graph .axis path,
+svg.ar-line-graph .grid path {
+  display: none;
+}
+
+svg.ar-line-graph .axis.hide-axis {
+  display: none;
+}
+
+svg.ar-line-graph .legned rect {
+  fill: rgba(235, 235, 235, 0.12);
+}
+
+svg.ar-line-graph .legned line {
+  stroke-width: 2;
+}
+</style>
+
+<figure>
+    <div id="ar-accuracy-graph">
+      <svg height="360" class="ar-line-graph" width="721">
+        <g transform="translate(70,10)">
+          <rect class="background" height="295" width="641"></rect>
+          <g class="grid" transform="translate(0,295)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+            <path class="domain" stroke="currentColor" d="M0.5,-360V0.5H641.5V-360"></path>
+            <g class="tick" opacity="1" transform="translate(29.636363636363637,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">0</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(87.9090909090909,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">2</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(146.1818181818182,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">4</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(204.45454545454544,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">6</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(262.72727272727275,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">8</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(321,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">10</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(379.2727272727273,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">12</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(437.5454545454545,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">14</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(495.8181818181818,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">16</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(554.0909090909091,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">18</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(612.3636363636364,0)">
+              <line stroke="currentColor" y2="-360"></line>
+              <text fill="currentColor" y="3" dy="0.71em">20</text>
+            </g>
+          </g>
+          <g class="grid" fill="none" font-size="10" font-family="sans-serif" text-anchor="end">
+            <path class="domain" stroke="currentColor" d="M641,0.5H0.5V295.5H641"></path>
+            <g class="tick" opacity="1" transform="translate(0,0.5)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">1.0</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(0,30)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.9</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,59.5)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.8</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(0,89)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.7</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,118.5)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.6</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(0,148)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.5</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,177.5)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.4</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(0,207)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.3</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,236.5)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.2</text>
+            </g>
+            <g class="tick minor" opacity="1" transform="translate(0,266)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.1</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,295.5)">
+              <line stroke="currentColor" x2="641"></line>
+              <text fill="currentColor" x="-3" dy="0.32em">0.0</text>
+            </g>
+          </g>
+          <g class="axis" transform="translate(0,295)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+            <path class="domain" stroke="currentColor" d="M0.5,6V0.5H641.5V6"></path>
+            <g class="tick" opacity="1" transform="translate(29.636363636363637,0)">
+              <line stroke="currentColor" y2="6"></line>
+              <text fill="currentColor" y="9" dy="0.71em">0</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(175.3181818181818,0)">
+              <line stroke="currentColor" y2="6"></line>
+              <text fill="currentColor" y="9" dy="0.71em">5</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(321,0)">
+              <line stroke="currentColor" y2="6"></line>
+              <text fill="currentColor" y="9" dy="0.71em">10</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(466.6818181818182,0)">
+              <line stroke="currentColor" y2="6"></line>
+              <text fill="currentColor" y="9" dy="0.71em">15</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(612.3636363636364,0)">
+              <line stroke="currentColor" y2="6"></line>
+              <text fill="currentColor" y="9" dy="0.71em">20</text>
+            </g>
+          </g>
+          <g class="axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end">
+            <path class="domain" stroke="currentColor" d="M-6,0.5H0.5V295.5H-6"></path>
+            <g class="tick" opacity="1" transform="translate(0,0.5)">
+              <line stroke="currentColor" x2="-6"></line>
+              <text fill="currentColor" x="-9" dy="0.32em">100%</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,59.5)">
+              <line stroke="currentColor" x2="-6"></line>
+              <text fill="currentColor" x="-9" dy="0.32em">80%</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,118.5)">
+              <line stroke="currentColor" x2="-6"></line>
+              <text fill="currentColor" x="-9" dy="0.32em">60%</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,177.5)">
+              <line stroke="currentColor" x2="-6"></line>
+              <text fill="currentColor" x="-9" dy="0.32em">40%</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,236.5)">
+              <line stroke="currentColor" x2="-6"></line>
+              <text fill="currentColor" x="-9" dy="0.32em">20%</text>
+            </g>
+            <g class="tick" opacity="1" transform="translate(0,295.5)">
+              <line stroke="currentColor" x2="-6"></line>
+              <text fill="currentColor" x="-9" dy="0.32em">0%</text>
+            </g>
+          </g>
+          <g class="axis-title"></g>
+          <g class="lines-container">
+            <g class="lines-type" style="stroke: rgb(248, 118, 109);">
+              <path
+                class="line"
+                d="M29.136363636363637,246.3301684L58.27272727272727,181.9788448L87.4090909090909,130.98258715000003L116.54545454545455,100.91370029999999L145.6818181818182,94.9872034L174.8181818181818,96.60811924999999L203.95454545454544,100.44018399999999L233.0909090909091,98.79768595000002L262.22727272727275,102.71839524999999L291.3636363636364,109.09241010000002L320.5,118.46343024999999L349.6363636363636,133.08974560000001L378.7727272727273,147.42324985L407.9090909090909,172.52864075000002L437.0454545454545,211.0938757L466.1818181818182,248.00473295L495.3181818181818,275.3478906L524.4545454545455,283.66837445L553.5909090909091,284.23819645L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 8px, 0px;"
+              ></path>
+              <path
+                class="line"
+                d="M29.136363636363637,228.2937799L58.27272727272727,151.46306245L87.4090909090909,105.37339524999999L116.54545454545455,73.63542494999999L145.6818181818182,64.49675564999998L174.8181818181818,65.94505519999998L203.95454545454544,70.49602314999998L233.0909090909091,71.95204580000001L262.22727272727275,78.19804245L291.3636363636364,86.51208940000001L320.5,97.78208649999999L349.6363636363636,114.61198105L378.7727272727273,132.6717129L407.9090909090909,160.5414662L437.0454545454545,199.46156845000002L466.1818181818182,244.6313106L495.3181818181818,273.81939235L524.4545454545455,281.0243278L553.5909090909091,284.23819645L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 8px, 8px;"
+              ></path>
+              <path
+                class="line"
+                d="M29.136363636363637,216.83061974999998L58.27272727272727,137.04838895L87.4090909090909,92.48347644999998L116.54545454545455,61.31510690000002L145.6818181818182,53.12586855000001L174.8181818181818,55.952865349999996L203.95454545454544,61.59511499999999L233.0909090909091,64.88390774999999L262.22727272727275,72.3317226L291.3636363636364,82.01005900000001L320.5,94.13809309999999L349.6363636363636,112.05206544999999L378.7727272727273,130.79899095L407.9090909090909,159.1838821L437.0454545454545,198.81204925L466.1818181818182,244.6313106L495.3181818181818,273.81939235L524.4545454545455,281.0243278L553.5909090909091,284.23819645L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 2px, 2px;"
+              ></path>
+            </g>
+            <g class="lines-type" style="stroke: rgb(0, 186, 56);">
+              <path
+                class="line"
+                d="M29.136363636363637,245.8036583L58.27272727272727,184.00124385L87.4090909090909,136.04179879999998L116.54545454545455,105.95676365000003L145.6818181818182,97.46580225L174.8181818181818,97.45317920000002L203.95454545454544,100.4642088L233.0909090909091,97.58875825000001L262.22727272727275,100.10443269999999L291.3636363636364,105.96644850000001L320.5,114.27940985000001L349.6363636363636,128.32693225L378.7727272727273,142.8269463L407.9090909090909,169.40679734999998L437.0454545454545,206.59417285L466.1818181818182,245.7562695L495.3181818181818,275.246505L524.4545454545455,283.37992345L553.5909090909091,284.2150537L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 8px, 0px;"
+              ></path>
+              <path
+                class="line"
+                d="M29.136363636363637,227.6284369L58.27272727272727,154.97788125L87.4090909090909,111.37287515L116.54545454545455,78.58332425L145.6818181818182,66.66560745000001L174.8181818181818,66.43415340000001L203.95454545454544,70.23523724999998L233.0909090909091,71.29824024999999L262.22727272727275,76.7266621L291.3636363636364,85.22378014999998L320.5,96.0175735L349.6363636363636,112.97817665L378.7727272727273,131.01407545L407.9090909090909,159.5264125L437.0454545454545,199.06025635L466.1818181818182,244.8315035L495.3181818181818,273.94407705L524.4545454545455,281.1308759L553.5909090909091,284.2150537L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 8px, 8px;"
+              ></path>
+              <path
+                class="line"
+                d="M29.136363636363637,216.1156489L58.27272727272727,141.14316595L87.4090909090909,98.76354560000001L116.54545454545455,65.55611540000001L145.6818181818182,54.748675349999985L174.8181818181818,56.311015999999995L203.95454545454544,61.47698224999999L233.0909090909091,64.41092245000002L262.22727272727275,71.6349031L291.3636363636364,81.33416679999999L320.5,93.58169949999998L349.6363636363636,111.32998805L378.7727272727273,130.49314379999998L407.9090909090909,159.3247741L437.0454545454545,198.94253659999998L466.1818181818182,244.8315035L495.3181818181818,273.94407705L524.4545454545455,281.1308759L553.5909090909091,284.2150537L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 2px, 2px;"
+              ></path>
+            </g>
+            <g class="lines-type" style="stroke: rgb(97, 156, 255);">
+              <path
+                class="line"
+                d="M29.136363636363637,254.6786861L58.27272727272727,198.78416585L87.4090909090909,149.8631034L116.54545454545455,120.62854440000001L145.6818181818182,111.62832450000002L174.8181818181818,110.31731205000003L203.95454545454544,112.27428304999998L233.0909090909091,107.63955279999999L262.22727272727275,108.9621558L291.3636363636364,113.03820324999998L320.5,121.83810340000002L349.6363636363636,134.7832993L378.7727272727273,148.46776814999998L407.9090909090909,174.07137275000002L437.0454545454545,210.73114665L466.1818181818182,247.81398005L495.3181818181818,275.2895337L524.4545454545455,283.7547652L553.5909090909091,284.19181065L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 8px, 0px;"
+              ></path>
+              <path
+                class="line"
+                d="M29.136363636363637,239.1162384L58.27272727272727,170.9266226L87.4090909090909,126.8663961L116.54545454545455,92.93288535000002L145.6818181818182,77.66313664999998L174.8181818181818,75.2237256L203.95454545454544,77.21383985L233.0909090909091,76.5009163L262.22727272727275,80.4454203L291.3636363636364,87.69701294999999L320.5,97.72250829999999L349.6363636363636,114.28716835L378.7727272727273,132.07717285L407.9090909090909,160.32357625L437.0454545454545,199.63692824999998L466.1818181818182,244.78475485L495.3181818181818,273.7564954L524.4545454545455,281.1308759L553.5909090909091,284.19181065L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 8px, 8px;"
+              ></path>
+              <path
+                class="line"
+                d="M29.136363636363637,228.8563862L58.27272727272727,157.10162755000002L87.4090909090909,114.6296604L116.54545454545455,78.94705925L145.6818181818182,63.37288235L174.8181818181818,62.17663670000002L203.95454545454544,65.5080068L233.0909090909091,67.09487375L262.22727272727275,73.09035640000002L291.3636363636364,82.43343709999999L320.5,94.21146255L349.6363636363636,111.83999879999999L378.7727272727273,130.3720581L407.9090909090909,159.28382514999998L437.0454545454545,198.75175124999998L466.1818181818182,244.66824755L495.3181818181818,273.7564954L524.4545454545455,281.1308759L553.5909090909091,284.19181065L582.7272727272727,295L611.8636363636364,295L641,295"
+                style="stroke-dasharray: 2px, 2px;"
+              ></path>
+            </g>
+          </g>
+        </g>
+        <text text-anchor="middle" y="345" x="390.5">characters from word</text>
+        <path d="M17.5,305 V10" id="ar-accuracy-graph-ylabel-vline"></path>
+        <text><textPath startOffset="50%" href="#ar-accuracy-graph-ylabel-vline" text-anchor="middle" xlink:href="#ar-training-graph--ylabel">accuracy</textPath></text>
+      </svg>
+      <div class="legend" style="margin-left: 55px; margin-right: 10px;">
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(248, 118, 109); stroke-dasharray: 8px, 0px;"></path>
+          <text class="legend-text" x="28" y="12">GRU - top 1</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(248, 118, 109); stroke-dasharray: 8px, 8px;"></path>
+          <text class="legend-text" x="28" y="12">GRU - top 2</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(248, 118, 109); stroke-dasharray: 2px, 2px;"></path>
+          <text class="legend-text" x="28" y="12">GRU - top 3</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(0, 186, 56); stroke-dasharray: 8px, 0px;"></path>
+          <text class="legend-text" x="28" y="12">LSTM - top 1</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(0, 186, 56); stroke-dasharray: 8px, 8px;"></path>
+          <text class="legend-text" x="28" y="12">LSTM - top 2</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(0, 186, 56); stroke-dasharray: 2px, 2px;"></path>
+          <text class="legend-text" x="28" y="12">LSTM - top 3</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(97, 156, 255); stroke-dasharray: 8px, 0px;"></path>
+          <text class="legend-text" x="28" y="12">Nested LSTM - top 1</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(97, 156, 255); stroke-dasharray: 8px, 8px;"></path>
+          <text class="legend-text" x="28" y="12">Nested LSTM - top 2</text>
+        </svg>
+        <svg height="24" class="legend-item">
+          <rect class="legend-background" width="24" height="24"></rect>
+          <path class="legend-color" d="M0,12 L24,12" style="stroke: rgb(97, 156, 255); stroke-dasharray: 2px, 2px;"></path>
+          <text class="legend-text" x="28" y="12">Nested LSTM - top 3</text>
+        </svg>
+      </div>
+    </div>
+  </figure>

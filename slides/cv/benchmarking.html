@@ -1,0 +1,35 @@
+<style scoped>
+    :scope .content {
+        height: 400px;
+        overflow: hidden;
+        border-top: 1px solid #839496;
+        border-bottom: 1px solid #839496;
+    }
+
+    :scope .img {
+        width: 918px;
+        height: 9504px;
+        background-image: url(slides/cv/1806.10758.svg);
+        background-color: white;
+        background-size: 918px 9504px;
+        margin: 0 auto;
+        position: relative;
+        transition: top 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    :scope .img[data-position="0"] {
+        top: -82px;
+    }
+
+    :scope .img[data-position="1"] {
+        top: -8750px;
+    }
+</style>
+
+<article id="benchmarking-logic">
+    <div hidden class="fragment current-visible" data-fragment-index="0"></div>
+</article>
+
+<article class="content">
+    <div id="benchmarking-img" class="img" data-position="0">
+</article>

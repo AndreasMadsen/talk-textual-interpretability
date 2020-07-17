@@ -4,26 +4,154 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Textual Interpretability</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/highlight/solarized-dark.css" id="highlight-theme">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Textual Interpretability</h1>
+					<section id="font-page">
+					<h2>Making Machine Learning<br> more socially responsible,<br> one step at a time.</h2>
+					</section>
+				</section>
+				<section>
+					<h1>2014</h1>
+					<section data-background-image="slides/2014/conference.jpg" data-background-color="black" data-background-size="cover"></section>
+					<section>
+						<p>
+						"We have developed an <strong>amazing</strong> machine learning model, for predicting if our customers will be able to pay back their loan" <em>– Bank<span class="fragment" data-fragment-index="1">*</span> Representative</em>
+						</p>
+						<p>
+							<span class="fragment" data-fragment-index="1">*: <em>You properly shouldn't trust anything said.</em></span>
+						</p>
+					</section>
+					<section>
+						<p>
+							"One small issue, our customer-facing advisors don't understand or trust the model and sometimes goes against it." <em>– Bank Spokesperson</em>
+						</p>
+					</section>
+					<section>
+						<p>
+							"Oh, we just did some visual discretizations and told them to trust it." <em>– Bank Representative</em>
+						</p>
+					</section>
+					<section>
+						<p>
+							Needless to say, they missed the point.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h1>GDPR, Article 13</h1>
+					<section>
+						<p>
+							§2: "... the controller shall, provide the data subject with the information necessary to ensure fair and transparent processing".
+						</p>
+						<p>
+							§2.f: such as "the existence of automated decision-making, and at least in those cases, meaningful information about the logic involved ...".
+						</p>
+					</section>
+					<section data-import-from="slides/gdpr/grades.html"></section>
+				</section>
+				<section>
+					<h1>Me</h1>
+					<section data-import-from="slides/me/me.html"></section>
+				</section>
+				<section>
+					<h1>Nested LSTM</h1>
+					<section data-import-from="slides/nested-lstm/paper.html" data-script="slides/nested-lstm/paper.js"></section>
+					<section>
+						<p class="fragment semi-fade-out" data-fragment-index="1">
+							You can't say something about memorization from a single hidden unit.
+						</p>
+						<p class="fragment fade-in" data-fragment-index="1">
+							But then how?
+						</p>
+					</section>
+				</section>
+				<section data-background-color="white">
+					<section data-background-color="white" data-background-video="slides/distill/distill-paper.mp4" data-background-video-loop data-background-video-muted data-background-size="contain">
+					</section>
+				</section>
+				<section data-background-color="white" style="color: rgba(0, 0, 0, 0.7);;">
+					<h1 style="color: rgba(0, 0, 0, 0.7);">Textual Saliency</h1>
+					<section data-background-color="white" data-import-from="slides/distill/autocomplete.html"></section>
+					<section data-background-color="white" data-import-from="slides/distill/connectivity.html"></section>
+					<section data-background-color="white" data-import-from="slides/distill/gru-heatmap.html" data-script="slides/distill/gru-heatmap.js"></section>
+					<section data-background-color="white">
+						<p class="fragment semi-fade-out"  data-fragment-index="1" style="font-size: 130%;">"Intuition is developed from a <br>feedback loop."</p>
+						<p class="fragment fade-in"  data-fragment-index="1" style="font-size: 130%;">"Interactive visualization proivides a feedback loop."</p>
+					</section>
+				</section>
+				<section>
+					<h1>Confirmation Bias</h1>
+					<section>
+						<p class="fragment semi-fade-out" data-fragment-index="1">
+							"Confirmation bias is when we interpret or favor information that confirms one's personal beliefs."
+						</p>
+						<p class="fragment fade-in" data-fragment-index="1">
+							Transform your intuition into a quantifiable hypothesis!
+						</p>
+					</section>
+					<section data-import-from="slides/confirmation-bias/quntative-graph.html"></section>
+				</section>
+				<section>
+					<h1>Computer Vision</h1>
+					<section data-import-from="slides/cv/saliency-methods.html" data-script="slides/cv/saliency-methods.js"></section>
+					<section data-import-from="slides/cv/benchmarking.html" data-script="slides/cv/benchmarking.js"></section>
+					<section>
+						<p>tl;dr: most methods are not better than a random baseline.</p>
+					</section>
+					<section>
+						<p>Why where so many papers published, all claiming improved methods?</p>
+						<p class="fragment"><strong>Confirmation bias!</strong></p>
+					</section>
+				</section>
+				<section>
+					<h1>NLP vs CV</h1>
+					<section>
+						<ul>
+							<li>Information density?</li>
+							<li>Noise expressions?</li>
+							<li>Discreteness?</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>Tools for research</h1>
+					<section data-import-from="slides/tools/github.html"></section>
+					<section data-import-from="slides/tools/code.html"></section>
+					<section data-import-from="slides/tools/bert.html" data-script="slides/tools/bert.js"></section>
+				</section>
+				<section>
+					<h1>Remember</h1>
+					<section>
+						<p class="fragment semi-fade-out" data-fragment-index="1">Use these tools to explain models,<br>
+						but be hyper-aware of <strong>confirmation bias</strong>.</p>
+						<p class="fragment fade-in" data-fragment-index="1">Always transform your intuition into <br><strong>a quantifiable hypothesis</strong>.</p>
+					</section>
+				</section>
+				<section>
+					<h1>Links</h1>
+					<section data-import-from="slides/links/links.html"></section>
+				</section>
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
+
+		<script src="plugin/import/import.js"></script>
+		<script src="plugin/math-katex/math.js"></script>
+		<script src="plugin/control-hide/control-hide.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 			// More info about initialization & config:
@@ -31,9 +159,9 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				history: true,
+				center: false,
+				plugins: [ RevealMath, RevealControlHide, RevealHighlight ]
 			});
 		</script>
 	</body>
